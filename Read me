@@ -1,0 +1,54 @@
+# Monzo-Style Credit Analytics SQL Project
+
+**Author:** Alita S.  
+**Purpose:** Portfolio project demonstrating SQL skills for credit risk analytics in unsecured retail lending
+
+---
+
+## Overview
+
+This project simulates a credit analytics workflow for an unsecured retail lending portfolio (personal loans and overdrafts), covering:
+
+- Portfolio health monitoring
+- Default rate analysis by risk tier
+- Pricing impact on portfolio performance
+- Early warning indicators
+- Underwriting strategy evaluation
+
+The dataset schema mirrors what you'd expect at a fintech lender like Monzo.
+
+---
+
+## Schema
+
+### Tables
+| Table | Description |
+|---|---|
+| `customers` | Customer demographics and credit profile at origination |
+| `loan_applications` | All loan applications, including approved/declined |
+| `loans` | Active and closed loans |
+| `repayments` | Monthly repayment events |
+| `defaults` | Default events with trigger reason |
+
+---
+
+## Files
+
+- `01_schema_and_seed.sql` — Create tables and insert realistic sample data
+- `02_portfolio_health.sql` — Core portfolio monitoring queries
+- `03_risk_and_default_analysis.sql` — Default rates, risk tier breakdowns
+- `04_pricing_analysis.sql` — APR impact on performance and take-up rates
+- `05_underwriting_strategy.sql` — Strategy evaluation: approval rates, cut-off analysis
+- `06_advanced_window_functions.sql` — CTEs, window functions, cohort analysis
+
+---
+
+## Key SQL Concepts Demonstrated
+
+- `JOIN` (INNER, LEFT, ANTI)
+- Aggregations (`GROUP BY`, `HAVING`)
+- Subqueries and CTEs (`WITH`)
+- Window functions (`ROW_NUMBER`, `LAG`, `SUM OVER`)
+- CASE WHEN logic for risk banding
+- Date arithmetic for vintage analysis
+- Cohort-based default curves
