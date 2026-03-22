@@ -1,9 +1,4 @@
--- My Credit Risk Analysis
--- Using the Credit_Risk dataset (200 customers)
--- Written by Alita S.
 
-
--- First things first, let me just see what the data looks like
 SELECT *
 FROM Credit_Risk
 LIMIT 10;
@@ -18,7 +13,7 @@ GROUP BY RiskCategory;
 
 
 -- What's the average credit score for each risk group?
--- I'd expect High risk to have lower scores
+
 SELECT
     RiskCategory,
     ROUND(AVG(CreditScoreAtLoan), 0) AS avg_credit_score
@@ -37,7 +32,7 @@ ORDER BY avg_default_chance_pct DESC;
 
 
 -- What protection do customers have?
--- Collateral, Insurance, Co-signer, or nothing at all
+
 SELECT
     RiskMitigation,
     COUNT(*) AS total
@@ -56,7 +51,7 @@ ORDER BY avg_default_chance_pct ASC;
 
 
 -- Let me group customers into credit score buckets
--- to see the shape of the portfolio
+
 SELECT
     CASE
         WHEN CreditScoreAtLoan >= 750 THEN 'Excellent'
